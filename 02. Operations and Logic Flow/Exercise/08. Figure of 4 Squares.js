@@ -5,20 +5,13 @@ function figureOfFourSquares(n) {
     const dashes = '-'.repeat(n - 2);
     const spaces = ' '.repeat(n - 2);
     const fillLines = ((n % 2 === 0) ? n - 4 : n - 3) / 2;
-    const filler = [...Array(fillLines)]
+    const main = `+${dashes}+${dashes}+`;
+    let filler = [...Array(fillLines)]
       .fill(`|${spaces}|${spaces}|`, 0)
       .join('\n');
-    const main = `+${dashes}+${dashes}+`;
+    filler = filler.length ? '\n' + filler + '\n' : '\n';
 
-    console.log(main);
-    if (filler.length) {
-      console.log(filler);
-    }
-    console.log(main);
-    if (filler.length) {
-      console.log(filler);
-    }
-    console.log(main);
+    console.log(main + filler + main + filler + main);
   }
 }
 
