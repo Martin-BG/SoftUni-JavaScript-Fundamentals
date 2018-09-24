@@ -11,7 +11,7 @@ function calendar([day, month, year]) {
     '<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>\n';
 
   date.setDate(date.getDate() - 1);
-  do {
+  for (; ;) {
     date.setDate(date.getDate() + 1);
     if (date.getDay() === 0) {
       html += '<tr>';
@@ -36,7 +36,7 @@ function calendar([day, month, year]) {
         break;
       }
     }
-  } while (true);
+  }
 
   html += '</table>';
   return html;
