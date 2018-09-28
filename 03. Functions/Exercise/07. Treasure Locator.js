@@ -6,6 +6,7 @@ function treasureLocator(coordinates) {
     {name: 'Tonga', xA: 0, yA: 6, xB: 2, yB: 8},
     {name: 'Cook', xA: 4, yA: 7, xB: 9, yB: 8},
   ];
+  const onTheBottomOfTheOcean = 'On the bottom of the ocean';
 
   const treasures = coordinates.reduce((points, value, index) => {
     if (index % 2 === 0) {
@@ -25,7 +26,7 @@ function treasureLocator(coordinates) {
   };
 
   treasures.forEach((treasure) => {
-    let result = 'On the bottom of the ocean';
+    let result = onTheBottomOfTheOcean;
     for (const island of islands) {
       if (isWithin(island, treasure)) {
         result = island.name;
