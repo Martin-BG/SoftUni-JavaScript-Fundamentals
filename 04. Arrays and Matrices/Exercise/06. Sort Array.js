@@ -1,6 +1,6 @@
 function sortArray(input) {
   console.log([].concat(input)
-    .sort((a, b) => a.length - b.length || a > b)
+    .sort((a, b) => a.length - b.length || a.toLowerCase() > b.toLowerCase())
     .join('\n')
   );
 }
