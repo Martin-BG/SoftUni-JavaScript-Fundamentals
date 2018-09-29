@@ -6,14 +6,17 @@ function dnaHelix(length) {
     ['A', 'G'],
     ['G', 'G'],
   ];
-  const stars = ['**', '*', '', '*'];
-  const hyphens = ['', '--', '----', '--'];
+  const fillers = [
+    ['**', '', '**'],
+    ['*', '--', '*'],
+    ['', '----', ''],
+    ['*', '--', '*'],
+  ];
 
   for (let line = 0; line < length; line++) {
     const pair = pairs[line % pairs.length];
-    const starsStr = stars[line % stars.length];
-    const hyphensStr = hyphens[line % hyphens.length];
-    console.log(starsStr + pair[0] + hyphensStr + pair[1] + starsStr);
+    const filler = fillers[line % fillers.length];
+    console.log(filler[0] + pair[0] + filler[1] + pair[1] + filler[2]);
   }
 }
 
