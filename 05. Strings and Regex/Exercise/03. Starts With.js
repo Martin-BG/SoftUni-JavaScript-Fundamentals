@@ -1,11 +1,11 @@
-function startsWith(text, value) {
+function textStartsWith(text, value) {
   console.log(text.startsWith(value));
 }
 
-startsWith('How have you been?', 'how');
+textStartsWith('How have you been?', 'how');
 
-startsWith('The quick brown fox…', 'The quick brown fox…');
+textStartsWith('The quick brown fox…', 'The quick brown fox…');
 
-startsWith(
+textStartsWith(
   'Marketing Fundamentals, starting 19/10/2016',
   'Marketing Fundamentals, sta');
